@@ -411,6 +411,24 @@
     .stage{ opacity:1; transform:none; animation:none; }
     h1 .letter{ opacity:1; transform:none; animation:none; }
   }
+
+  @media (max-width: 420px){
+    body{ padding-inline:12px; }
+    .stage{ padding-block: 36px 48px; }
+    .ornament{ width:96px; margin-bottom:12px; }
+    .subtitle{ margin-bottom:22px; }
+    .couple{ margin:4px 0 14px; }
+    .frame-wrap{ margin-bottom:8px; }
+    .edit-tag{ margin:10px 0 26px; }
+    .card{ padding:24px 18px; min-height:150px; }
+    .phrase{ min-height:2.8em; }
+    .footer{ margin-top:28px; }
+  }
+
+  @media (max-width: 340px){
+    h1{ font-size: clamp(2.1rem, 13vw, 3rem); }
+    .env-title{ font-size: clamp(1.2rem, 6vw, 1.5rem); }
+  }
 </style>
 </head>
 <body>
