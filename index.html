@@ -345,6 +345,46 @@
     transform: scale(1.35);
   }
 
+  .choco-card{
+    position:relative;
+    margin-top:24px;
+    width:100%;
+    padding:22px 26px;
+    border-radius:20px;
+    background: linear-gradient(160deg, #6b3a2a, #3f2016);
+    box-shadow: 0 22px 44px var(--shadow), inset 0 0 0 1px rgba(255,255,255,0.06);
+    display:flex;
+    align-items:center;
+    gap:16px;
+    text-align:left;
+    overflow:hidden;
+  }
+  .choco-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: radial-gradient(circle at 15% 20%, rgba(207,157,92,0.35), transparent 55%);
+    pointer-events:none;
+  }
+  .choco-icon{
+    font-size:2rem;
+    line-height:1;
+    flex-shrink:0;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+  }
+  .choco-text{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:clamp(1rem, 4vw, 1.2rem);
+    line-height:1.45;
+    color:#f9e4cf;
+  }
+  .choco-text strong{
+    font-style:normal;
+    font-family:'Playfair Display', serif;
+    color:#f2c895;
+  }
+
   .footer{
     margin-top: 40px;
     display:flex;
@@ -428,6 +468,11 @@
     <div class="dots" id="dots"></div>
   </div>
 
+  <div class="choco-card">
+    <span class="choco-icon">🍫</span>
+    <p class="choco-text">Um chocolate para <strong>a pessoa mais doce</strong> que eu conheço.</p>
+  </div>
+
   <div class="footer">
     <svg class="heart-mini" viewBox="0 0 32 29" fill="currentColor"><path d="M16 29 C4 20 0 13 0 8 C0 2 5 0 8 0 C12 0 15 3 16 6 C17 3 20 0 24 0 C27 0 32 2 32 8 C32 13 28 20 16 29 Z"/></svg>
     <span>Este cantinho é seu</span>
@@ -500,7 +545,8 @@
     "Eu escolheria você em qualquer versão da minha vida.",
     "Você é aquele tipo de saudade que sinto mesmo perto de você.",
     "Cada pequeno detalhe seu é o meu favorito.",
-    "Meu lugar mais bonito é ao seu lado."
+    "Meu lugar mais bonito é ao seu lado.",
+    "Um chocolate para a pessoa mais doce que existe."
   ];
 
   var phraseEl = document.getElementById('phrase');
